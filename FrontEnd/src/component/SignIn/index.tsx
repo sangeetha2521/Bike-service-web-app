@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { mutate } from "swr";
 
+// Custom styles using makeStyles from Material-UI
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -48,6 +49,8 @@ export default function SignIn() {
     handleSubmit,
   } = useForm();
   const [Error, setError] = useState(Boolean);
+
+  // Email validation logic
   const emailWatchFields = watch("email");
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

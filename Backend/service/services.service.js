@@ -22,7 +22,7 @@ const get = async (id) => {
 const createService = async (data) => {
   console.log(data);
   try {
-    const id = uuidv4();
+    const id = uuidv4(); // Generate a new unique ID for the service
     const newService = new serviceModel({ id, ...data });
     const services = await newService.save();
     return services;
