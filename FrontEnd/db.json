@@ -1,0 +1,57 @@
+{
+  "user": [
+    {
+      "_id": { "$oid": "64bcebf8af12b398030c6139" },
+      "email": "sangins8101@gmail.com",
+      "password": "$2b$10$eOeUuVyXP1nUO2mNjjSiNOte49BdeFqL2vj0Sdjg8x/RcH1lzM34u",
+      "phoneNumber": "9342240290",
+      "role": "user",
+      "__v": { "$numberInt": "0" }
+    }
+  ],
+  "services": [
+    {
+      "meta": 200,
+      "service": [
+        {
+          "_id": "64bd213b235007f864862018",
+          "id": "6a1cebc9-8f10-48c3-ba5b-2a8a24b41fad",
+          "service_type": "Oil change",
+          "cost": 200,
+          "name": "Oil change",
+          "description": "dsad",
+          "img": "https://i.ytimg.com/vi/xOj_RY1FelI/maxresdefault.jpg",
+          "__v": 0
+        }
+      ]
+    }
+  ],
+  "booking": [
+    {
+      "meta": 200,
+      "booking": {
+        "_id": "64bd1254144275972ae9bf69",
+        "phoneNumber": "9342240290",
+        "location": "Banglore",
+        "date": "2023-07-23T11:44:00.000Z",
+        "userId": "64bcebf8af12b398030c6139",
+        "serviceIds": ["64bcbd87b83096739713dbcc", "64bcbd23b83096739713dbc9"],
+        "status": "Delivery",
+        "__v": 0
+      }
+    },
+    {
+      "meta": 200,
+      "booking": {
+        "_id": "64bd1254144275972ae9bf69",
+        "phoneNumber": "9342240290",
+        "location": "Banglore",
+        "date": "2023-07-23T11:44:00.000Z",
+        "userId": "64bcebf8af12b398030c6139",
+        "serviceIds": ["64bcbd87b83096739713dbcc", "64bcbd23b83096739713dbc9"],
+        "status": "Delivery",
+        "__v": 0
+      }
+    }
+  ]
+}
