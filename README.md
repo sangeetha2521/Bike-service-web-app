@@ -50,6 +50,8 @@ Make sure to set these environment variables either as system environment variab
 
 DB_URL="mongodb+srv://sangins8101:nsfamily25@bikeservice.ciancre.mongodb.net/bikeservice?retryWrites=true&w=majority"
 SECRET_KEY="XXXXXXXX"
+
+This mail and passowrd for mac application 
 MAIL_USERNAME="devsangisuresh@gmail.com"
 MAIL_PASSWORD="qikarfqubrgegvqu"
 
