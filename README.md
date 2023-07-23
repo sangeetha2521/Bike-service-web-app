@@ -2,10 +2,12 @@
 
 This application is for owners of Bike service stations. It helps the owners to list all the services they offer. Customers can choose one or more services to book
 
-BikeService Application
+BikeService Application:
+
 Welcome to the BikeService application! This application provides a platform for managing bike services and related activities.
 
-Running the Application
+Running the Application:
+
 To run the application, follow these steps:
 
 Make sure you have Node.js and npm installed on your machine.
@@ -16,7 +18,6 @@ Open a terminal (command prompt) and navigate to the root directory of the proje
 
 Install the dependencies for both the frontend and backend:
 
-Copy code
 npm install
 Start the backend server:
 npm start
