@@ -20,6 +20,8 @@ const getBooking = async (req, res) => {
 const createBooking = async (req, res) => {
   const booking = await bookings.createBooking(req.body.data);
   const getUSerById = await user.getAUser(booking.userId);
+
+  // Configuring nodemailer
   const config = {
     service: "gmail",
     auth: {
@@ -29,13 +31,13 @@ const createBooking = async (req, res) => {
   };
 
   const transporter = nodemailer.createTransport(config);
-
+  // Email body
   const emailBody = `
     <!DOCTYPE html>
 <html>
   <head>
   <body>      
-        <td>Hi, ${booking.userId} your Bike service booking is Successful!. </td>
+        <td>Hi, your Bike service booking is Successful!. </td>
     <p>Thank you for booking with us! We look forward to serving you.</p>
   </body>
 </html>
@@ -72,13 +74,13 @@ const editBooking = async (req, res) => {
   };
 
   const transporter = nodemailer.createTransport(config);
-
+  // Email body with updated booking status
   const emailBody = `
     <!DOCTYPE html>
 <html>
   <head>
   <body>      
-        <td>Hi, ${booking.userId} your Bike service booking status is changed to ${booking.status}</td>
+        <td>Hi, your Bike service booking status is changed to ${booking.status}</td>
   </body>
 </html>
 

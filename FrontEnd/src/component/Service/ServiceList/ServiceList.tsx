@@ -34,6 +34,9 @@ export default function ServiceList({ data, user }) {
   const handleDeleteService = async (serviceId) => {
     dispatch(setSelectedServicesDeleteLoading(serviceId));
   };
+
+  // Function to handle adding/removing selected services
+
   const handleCheckboxChange = (id, serviceName, serviceCost) => {
     const isServiceSelected = selectedServices.some((service) => service.id === id);
 
@@ -55,6 +58,7 @@ export default function ServiceList({ data, user }) {
     }
   };
 
+  // Function to calculate the total cost of selected services
   const calculateTotalCost = () => {
     let totalCost = 0;
     selectedServices.forEach((selectedService) => {
@@ -76,6 +80,8 @@ export default function ServiceList({ data, user }) {
   const handleClose = () => {
     setOpen(false);
   };
+
+  // Side effect to display toasts based on the API status
   useEffect(() => {
     if (setSelectedServicesDeleteLoading && status == "success") {
       toast.success("Service deleted successfully", {

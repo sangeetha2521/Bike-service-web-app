@@ -2,8 +2,9 @@ const userService = require("../service/user.service");
 
 const signUp = async (req, res) => {
   const token = await userService.signUp(req.body);
-
+  // Check if sign-up was successful or not
   if (token.meta != 403) {
+    // Set the access_token cookie and respond with success message
     return res
       .cookie("access_token", token.data, {
         httpOnly: false,
@@ -14,6 +15,7 @@ const signUp = async (req, res) => {
       .status(200)
       .json({ message: "sucess" });
   } else {
+    // Respond with failed message if sign-up failed
     return res.status(token.meta).json({ message: "failed" });
   }
 };
@@ -32,6 +34,7 @@ const signIn = async (req, res) => {
     .status(200)
     .json({ message: "sucess" });
 };
+// Function to get current user information (based on the access token)
 const currentUser = async (req, res) => {
   return res.status(200).send({ userId: req.userId, role: req.userRole });
 };
@@ -40,6 +43,7 @@ const getAUser = async (req, res) => {
   return res.send(user);
 };
 const logout = async (req, res) => {
+  // Clear the access_token cookie and respond with success message
   return res.clearCookie("access_token").status(200).json({ message: "Successfully logged out 😏" });
 };
 

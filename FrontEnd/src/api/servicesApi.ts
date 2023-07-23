@@ -16,7 +16,7 @@ export async function fetchService(id) {
     const response = await axios.get(`${apiUrl}/services/${id}`, { withCredentials: true });
     return response.data;
   } catch (error) {
-    console.error("Error fetching services:", error);
+    console.error("Error fetching service:", error);
   }
 }
 
@@ -35,7 +35,7 @@ export async function createServiceApi(data) {
     );
     return response;
   } catch (error) {
-    console.error("Error saving booking:", error);
+    console.error("Error create service:", error);
     throw error;
   }
 }
@@ -47,7 +47,7 @@ export async function deleteServiceApi(data) {
     const response = await axios.delete(`${apiUrl}/services/${data.payload}`, { withCredentials: true });
     return response;
   } catch (error) {
-    console.error("Error saving booking:", error);
+    console.error("Error delete service:", error);
     throw error;
   }
 }
@@ -68,7 +68,7 @@ export async function editServiceApi(data) {
     );
     return response;
   } catch (error) {
-    console.error("Error saving booking:", error);
+    console.error("Error edit service:", error);
     throw error;
   }
 }

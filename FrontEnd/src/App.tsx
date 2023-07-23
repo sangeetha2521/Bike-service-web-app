@@ -3,15 +3,13 @@ import { Routes, Route, HashRouter, Navigate, BrowserRouter } from "react-router
 import React from "react";
 import Services from "./component/Service";
 import { Provider } from "react-redux";
-import store, { useAppSelector } from "state/store";
+import store from "state/store";
 import Header from "common/header";
 import Bookings from "component/Bookings";
 import SignUp from "component/SignUp";
 import HomePage from "component";
 import SignIn from "component/SignIn";
-import PrivateRoute from "PrivateRoute";
 import PrivateRoutes from "PrivateRoute";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
