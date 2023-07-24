@@ -30,6 +30,8 @@ npm start
 
 # The frontend will be accessible on port 3000.
 
+# To sign up as an admin, you need to go to the route http://localhost:3000/admin/signup.
+
 # Environment Variables
 
 The application uses environment variables to configure certain settings. Make sure to set the following environment variables:
